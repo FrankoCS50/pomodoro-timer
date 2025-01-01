@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pomodoro Timer</h1>
+        <div class="timer-display" aria-live="polite">
+            <span id="timer">25:00</span>
+        </div>
+
+        <div class="progress-bar">
+            <div id="progress" class="progress"></div>
+        </div>
+
+        <div class="custom-times">
+            <label for="focusDuration">Focus Duration (min):</label>
+            <input type="number" id="focusDuration" value="25" min="1" max="60">
+            <label for="breakDuration">Break Duration (min):</label>
+            <input type="number" id="breakDuration" value="5" min="1" max="30">
+        </div>
+
+        <div class="settings-and-controls">
+            <div class="auto-start-toggle">
+                <label for="autoStart">Auto-Start Next Cycle:</label>
+                <input type="checkbox" id="autoStart" checked>
+            </div>
+
+            <div class="controls">
+                <button id="startButton">Start</button>
+                <button id="resetButton">Reset</button>
+            </div>
+        </div>
+
+        <div class="status" aria-live="polite">
+            <span id="statusText">Focus Time</span>
+        </div>
+
+        <div class="dark-mode-toggle">
+            <button id="darkModeButton">🌙 Dark Mode</button>
+        </div>
+    </div>
+
+    <audio id="endSound" src="bell-ringing-04.wav" preload="auto"></audio>
+    <script src="script.js"></script>
+</body>
+</html>

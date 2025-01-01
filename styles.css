@@ -1,0 +1,232 @@
+/* styles.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #eee;
+}
+
+.container {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  width: 380px;
+  max-width: 95%;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+body.dark-mode .container {
+  background-color: #202020;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+}
+
+.timer-display {
+  font-size: 4rem;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 12px;
+  background-color: #ddd;
+  margin-bottom: 25px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+body.dark-mode .progress-bar {
+  background-color: #333;
+}
+
+.progress {
+  height: 100%;
+  width: 0%;
+  background-color: #4CAF50;
+  border-radius: 6px;
+  transition: width 0.5s ease-out;
+}
+
+body.dark-mode .progress {
+  background-color: #00e676;
+}
+
+.custom-times {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.custom-times label {
+  font-size: 1rem;
+  margin-right: 10px;
+  margin-left: 5px;
+}
+
+.custom-times input {
+  padding: 8px 10px;
+  font-size: 1rem;
+  width: 70px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  outline: none;
+  transition: border-color 0.3s;
+  margin: 5px;
+}
+
+.custom-times input:focus {
+  border-color: #4CAF50;
+}
+
+.invalid-input {
+  border-color: red !important; /* Make border red */
+  box-shadow: 0 0 5px red; /* Add a red glow */
+}
+
+body.dark-mode .custom-times input {
+  background-color: #444;
+  border-color: #555;
+  color: #eee;
+}
+
+.settings-and-controls { /* New styles */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.auto-start-toggle {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.auto-start-toggle label {
+  font-size: 1rem;
+  margin-right: 10px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  margin: 0 10px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+#startButton {
+  background-color: #4CAF50;
+  color: white;
+}
+
+#resetButton {
+  background-color: #ddd;
+  color: #555;
+}
+
+button:hover {
+  transform: scale(1.03);
+  filter: brightness(1.05);
+}
+
+button:focus {
+  outline: 2px solid #4CAF50;
+  outline-offset: 2px;
+}
+
+body.dark-mode button {
+  background-color: #444;
+  color: #eee;
+  border: 1px solid #555;
+}
+
+body.dark-mode #startButton {
+  background-color: #008000;
+}
+
+body.dark-mode #resetButton {
+  background-color: #696969;
+  color: #eee;
+}
+
+.status {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.dark-mode-toggle {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.dark-mode-toggle button {
+  background-color: #444;
+  color: #eee;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.dark-mode-toggle button:hover {
+  background-color: #555;
+}
+
+/* Media Queries */
+@media (max-width: 450px) {
+  .container {
+      padding: 30px;
+  }
+
+  .timer-display {
+      font-size: 3rem;
+      margin-bottom: 20px;
+  }
+
+  button {
+      padding: 10px 16px;
+      font-size: 0.9rem;
+  }
+}
